@@ -19,12 +19,14 @@ let paciente2 = new Paciente("Simba", "tortuga", true);
 let paciente3 = new Paciente("Roberto", "loro", true);
 
 // proveedor 
-let proveedor = new Proveedor("Sabrositos", 2284423244);
+let proveedor1 = new Proveedor("Sabrositos", 2284423244);
+let proveedor2 = new Proveedor("Royal canin", 2284456789);
+let proveedor3 = new Proveedor("Company", 2284214365);
 
 // bienvenida
 console.error("-----------------------------");
 
-console.log("bienvenido a la Veterinaria Umma");
+console.log("BIENVENIDOS A LA VETERINARIA UMMA");
 
 console.error("-----------------------------");
 
@@ -62,7 +64,13 @@ while (true) {
                 console.log(paciente3);
                 break;
             case 4:
-                console.log(proveedor);
+                console.error("-----------------------------");
+                console.log(proveedor1);
+                console.error("-----------------------------");
+                console.log(proveedor2);
+                console.error("-----------------------------");
+                console.log(proveedor3);
+                console.error("-----------------------------");
                 break;
         };
     } else {
