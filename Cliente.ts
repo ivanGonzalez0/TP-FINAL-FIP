@@ -10,6 +10,7 @@ import { Veterinaria } from "./Veterinaria";
           this.telefono = telefono;
           this.clienteVip =5;
       }
+     
   
       public vipCliente(): void{
           if(this.clienteVip > 5){
@@ -19,11 +20,11 @@ import { Veterinaria } from "./Veterinaria";
           }
       }
   
-      public altaPaciente(): void {
-          console.log("Alta paciente");
+      public altaCliente(): void {
+          console.log("Alta Cliente");
       }
-      public bajaPaciente(): void {
-          console.log("Baja paciente");
+      public bajaCliente(): void {
+          console.log("Baja Cliente");
       }
       public modificarDatos(): void {
           console.log("Modificacion de datos");
@@ -32,3 +33,6 @@ import { Veterinaria } from "./Veterinaria";
           console.log(Math.random());
       }
   }
+
+  
+  
