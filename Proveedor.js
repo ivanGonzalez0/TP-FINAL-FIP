@@ -6,17 +6,17 @@ var Proveedor = /** @class */ (function () {
         this.nombre = nombre;
         this.telefono = telefono;
     }
-    Proveedor.prototype.altaPaciente = function () {
-        console.log("Alta paciente");
+    Proveedor.prototype.alta = function () {
+        console.log("El proveedor ".concat(this.nombre, " fue dado de alta"));
     };
-    Proveedor.prototype.bajaPaciente = function () {
-        console.log("Baja paciente");
+    Proveedor.prototype.baja = function () {
+        console.log("El proveedor ".concat(this.nombre, " fue dado de alta"));
     };
     Proveedor.prototype.modificarDatos = function () {
-        console.log("Modificacion de datos");
+        console.log("Datos modificados del proveedor ".concat(this.nombre));
     };
-    Proveedor.prototype.numeroId = function () {
-        console.log(Math.random());
+    Proveedor.prototype.idAleatorio = function () {
+        return Math.floor(Math.random() * 10000);
     };
     return Proveedor;
 }());
