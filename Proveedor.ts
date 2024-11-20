@@ -1,10 +1,9 @@
-import { Veterinaria } from "./Veterinaria";
+import { Veterinaria } from "./veterinaria";
 
 export class Proveedor implements Veterinaria {
     private nombre: string;
     private telefono: number;
-    
-    
+
 
     constructor(nombre: string, telefono: number) {
         this.nombre = nombre;
@@ -12,16 +11,15 @@ export class Proveedor implements Veterinaria {
         
     }
 
-   public altaPaciente(): void {
-        console.log("Alta paciente");
+    public alta(): void {
+        console.log(`El proveedor ${this.nombre} fue dado de alta`);
     }
-    public bajaPaciente(): void {
-        console.log("Baja paciente");
+    public baja(): void {
+        console.log(`El proveedor ${this.nombre} fue dado de alta`);
     }
     public modificarDatos(): void {
-        console.log("Modificacion de datos");
+        console.log(`Datos modificados del proveedor ${this.nombre}`);
+    } public idAleatorio(): number {
+        return Math.floor(Math.random() * 10000);
     }
-    public numeroId(): void {
-        console.log(Math.random());
-    }
-}
+        }
