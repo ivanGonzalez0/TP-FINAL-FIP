@@ -1,9 +1,4 @@
-/*Pacientes (mascotas): nombre, especie (si no es perro o gato, 
-deberá registrarse como exótica), id del dueño, las veterinarias
- deben contar con la opción de alta, baja y modificación de 
-los mismos.*/
-
-import { Veterinaria } from "../Veterinaria";
+import { Veterinaria } from "./Veterinaria";
 
 export class Paciente implements Veterinaria{
     private nombre: string;
@@ -13,18 +8,18 @@ export class Paciente implements Veterinaria{
     public constructor(nombre:string, especie: string, exotica: boolean){
         this.nombre= nombre;
         this.especie= especie;
-        this.exotica= false;
+        this.exotica= exotica;
     }
-    public altaPaciente(): void {
-        console.log(`El paciente ${this.nombre} fue dado de alta`);
+    public alta(): void {
+        console.log(`La paciente ${this.nombre} fue dado de alta`);
     }
-    public bajaPaciente(): void {
+    public baja(): void {
         console.log(`El paciente ${this.nombre} fue dado de baja`);
     }
     public modificarDatos(): void {
         console.log(`Modificacion de datos del paciente ${this.nombre}`);
     }
-    public numeroId(): void {
-        console.log(Math.random());
+    public idAleatorio(): number {
+        return Math.floor(Math.random() * 10000);
     }
 }
