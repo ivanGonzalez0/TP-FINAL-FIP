@@ -1,8 +1,9 @@
 import * as rls from 'readline-sync';
-import { Veterinaria1, Veterinaria2, Veterinaria3 } from "./Veterinaria";
-import { Paciente } from "./Paciente";
-import { Cliente } from "./Cliente";
-import { Proveedor } from "./Proveedor";
+
+import { Veterinaria1, Veterinaria2, Veterinaria3 } from "./veterinaria";
+import { Paciente } from "./paciente";
+import { Cliente } from "./cliente";
+import { Proveedor } from "./proveedores";
 
 // intancias / Veterinarias
 let veterinaria1 = new Veterinaria1("Veterinaria Umma", "dorrego 2745", Math.random());
@@ -10,9 +11,11 @@ let veterinaria2 = new Veterinaria2("Sr. Firulais", "Urquiza 123", Math.random()
 let veterinaria3 = new Veterinaria3("Mr. bigotes", "Av.Pringles 432", Math.random());
 
 // clientes
-let cliente1 = new Cliente("Andrea", 2284301901, Math.random());
-let cliente2 = new Cliente("Homero" ,35686975 , Math.random());
-let cliente3 =new Cliente ("Catalina", 47558320 ,Math.random());
+
+
+let cliente1 = new Cliente("andrea", 2284301901);
+let cliente2 = new Cliente("Fabian", 35686975);
+let cliente3 = new Cliente("Catalina", 47558320);
 
 // pacientes
 let paciente1 = new Paciente("Clota", "gato", false);
@@ -29,9 +32,11 @@ console.error("-----------------------------");
 
 console.log("BIENVENIDOS A LA RED DE VETERINARIA UMMA");
 
+
 console.error("-----------------------------");
 
 // menu de bienvenida
+
 let bienvenido: string = rls.question("Precione la tecla X para ver el menu: ");
 while (true) {
     if (bienvenido === "x") {
@@ -60,30 +65,68 @@ while (true) {
                 console.log(cliente2);
                 console.error("-----------------------------");
                 console.log(cliente3);
+
+
+                console.error("-----------------------------");
+                console.log(cliente2);
+                cliente2.registrarVisita();
+
+                console.error("-----------------------------");
+                console.log(cliente3);
+                cliente3.registrarVisita();
+
+
                 break;
             case 3:
                 console.error("-----------------------------");
                 console.log(paciente1);
+
                 console.error("-----------------------------");
                 console.log(paciente2);
                 console.error("-----------------------------");
                 console.log(paciente3);
+
+                paciente1.alta();
+                paciente1.idAleatorio();
+                console.error("-----------------------------");
+                console.log(paciente2);
+                paciente2.baja();
+                paciente2.idAleatorio();
+                console.error("-----------------------------");
+                console.log(paciente3);
+                paciente3.modificarDatos();
+                paciente3.idAleatorio();
+
                 break;
             case 4:
                 console.error("-----------------------------");
                 console.log(proveedor1);
+
                 console.error("-----------------------------");
                 console.log(proveedor2);
                 console.error("-----------------------------");
                 console.log(proveedor3);
+
+                console.log("ID:", proveedor1.idAleatorio());
+                console.error("-----------------------------");
+                console.log(proveedor2);
+                console.log("ID:", proveedor2.idAleatorio());
+                console.error("-----------------------------");
+                console.log(proveedor3);
+                console.log("ID:", proveedor3.idAleatorio());
+
                 console.error("-----------------------------");
                 break;
         };
     } else {
-        console.error("Error vuelva a escribir la letra X.");
+
+        console.error("error vuelva a escribir la letra X.");
     }
 
-    let menu2: string = rls.question("Ingrese la letra X para volver al menu principal o S para salir: ");
+    console.error("-----------------------------");
+    // MENU PRINCIPAL 
+    let menu2: string = rls.question("ingrese la letra X para volver al menu principal o S para salir: ");
+
     if (menu2 === "x") {
         console.error("-----------------------------");
         console.log(menu2);
@@ -93,4 +136,5 @@ while (true) {
         console.error("-----------------------------");
         break;
     }
+
 }
