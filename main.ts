@@ -11,6 +11,8 @@ let veterinaria2 = new Veterinaria2("Sr. Firulais", "Urquiza 123", Math.random()
 let veterinaria3 = new Veterinaria3("Mr. bigotes", "Av.Pringles 432", Math.random());
 
 // clientes
+
+
 let cliente1 = new Cliente("andrea", 2284301901);
 let cliente2 = new Cliente("Fabian", 35686975);
 let cliente3 = new Cliente("Catalina", 47558320);
@@ -28,12 +30,14 @@ let proveedor3 = new Proveedor("Company", 2284214365);
 // bienvenida
 console.error("-----------------------------");
 
-console.log("BIENVENIDOS A LA VETERINARIA UMMA");
+console.log("BIENVENIDOS A LA RED DE VETERINARIA UMMA");
+
 
 console.error("-----------------------------");
 
 // menu de bienvenida
-let bienvenido: string = rls.question("precione la tecla X para ver el menu: ");
+
+let bienvenido: string = rls.question("Precione la tecla X para ver el menu: ");
 while (true) {
     if (bienvenido === "x") {
         console.error("-----------------------------");
@@ -57,6 +61,11 @@ while (true) {
             case 2:
                 console.error("-----------------------------");
                 console.log(cliente1);
+                console.error("-----------------------------");
+                console.log(cliente2);
+                console.error("-----------------------------");
+                console.log(cliente3);
+
 
                 console.error("-----------------------------");
                 console.log(cliente2);
@@ -66,10 +75,17 @@ while (true) {
                 console.log(cliente3);
                 cliente3.registrarVisita();
 
+
                 break;
             case 3:
                 console.error("-----------------------------");
                 console.log(paciente1);
+
+                console.error("-----------------------------");
+                console.log(paciente2);
+                console.error("-----------------------------");
+                console.log(paciente3);
+
                 paciente1.alta();
                 paciente1.idAleatorio();
                 console.error("-----------------------------");
@@ -80,10 +96,17 @@ while (true) {
                 console.log(paciente3);
                 paciente3.modificarDatos();
                 paciente3.idAleatorio();
+
                 break;
             case 4:
                 console.error("-----------------------------");
                 console.log(proveedor1);
+
+                console.error("-----------------------------");
+                console.log(proveedor2);
+                console.error("-----------------------------");
+                console.log(proveedor3);
+
                 console.log("ID:", proveedor1.idAleatorio());
                 console.error("-----------------------------");
                 console.log(proveedor2);
@@ -91,16 +114,19 @@ while (true) {
                 console.error("-----------------------------");
                 console.log(proveedor3);
                 console.log("ID:", proveedor3.idAleatorio());
+
                 console.error("-----------------------------");
                 break;
         };
     } else {
+
         console.error("error vuelva a escribir la letra X.");
     }
 
     console.error("-----------------------------");
     // MENU PRINCIPAL 
     let menu2: string = rls.question("ingrese la letra X para volver al menu principal o S para salir: ");
+
     if (menu2 === "x") {
         console.error("-----------------------------");
         console.log(menu2);
@@ -110,5 +136,5 @@ while (true) {
         console.error("-----------------------------");
         break;
     }
-}
 
+}
